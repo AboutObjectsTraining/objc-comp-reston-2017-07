@@ -53,6 +53,17 @@ void DoArrayStuff() {
     }
 }
 
+void PlayWithFoundationInitMethods() {
+    NSString *s = [NSString alloc];
+    NSLog(@"%@", s);
+    
+    s = [s initWithString:@"Hello World!"];
+    NSLog(@"%@", s);
+    
+    NSString *s2 = [NSString stringWithFormat:@""];
+    NSLog(@"%@", s2);
+}
+
 void DoPetStuff() {
     Pet *pet = [[Pet alloc] init];
     NSLog(@"%@", [pet description]);
@@ -64,7 +75,8 @@ void DoPetStuff() {
 }
 
 int main(int argc, const char * argv[]) {
-    DoArrayStuff();
+    PlayWithFoundationInitMethods();
+//    DoArrayStuff();
 //    DoDogStuff();
 //    DoPetStuff();
 //    DoPersonStuff();
