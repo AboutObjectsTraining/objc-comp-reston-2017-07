@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ABD9FE911F2649F80059B588 /* UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD9FE901F2649F80059B588 /* UnitTests.m */; };
+		ABD9FEB91F26939E0059B588 /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = B42464601F2525C900272645 /* Pet.m */; };
 		B42464541F23B06500272645 /* old_main.m in Sources */ = {isa = PBXBuildFile; fileRef = B42464531F23B06500272645 /* old_main.m */; };
 		B424645B1F2502A800272645 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B424645A1F2502A800272645 /* main.m */; };
 		B424645E1F25037A00272645 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B424645D1F25037A00272645 /* Person.m */; };
@@ -204,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABD9FE911F2649F80059B588 /* UnitTests.m in Sources */,
+				ABD9FEB91F26939E0059B588 /* Pet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +365,7 @@
 				ABD9FE941F2649F80059B588 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B424644B1F23B06500272645 /* Build configuration list for PBXProject "Foo" */ = {
 			isa = XCConfigurationList;

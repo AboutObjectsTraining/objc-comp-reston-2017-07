@@ -1,5 +1,6 @@
 #import <XCTest/XCTest.h>
 #import "Person.h"
+#import "Pet.h"
 
 @interface UnitTests : XCTestCase @end
 
@@ -16,8 +17,10 @@
 }
 
 - (void)testDoSomethingAmazing {
-//    Person *fred = [[Person alloc] init];
-    NSLog(@"Yay!");
+    Pet *pet = [[Pet alloc] init];
+    [pet setName:@"Rover"];
+    [pet setBreed:@"Lab"];
+    NSLog(@"%@", pet);
 }
 
 - (void)testDoSomethingElseAmazing {

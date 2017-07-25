@@ -55,6 +55,9 @@ void DoArrayStuff() {
 
 void PlayWithFoundationInitMethods() {
     NSString *s = [NSString alloc];
+//    NSString *anotherS = [NSString alloc];
+//    NSString *foo = [s initWithFormat:@"%@", @"foo"];
+//    NSString *bar = [s initWithFormat:@"Hello World: %@", @"Oh, yes!"];
     NSLog(@"%@", s);
     
     s = [s initWithString:@"Hello World!"];

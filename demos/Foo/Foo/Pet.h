@@ -10,11 +10,22 @@
 @end
 
 
-@interface Pet : NSObject {
-    NSString *_breed;
-}
+@interface Pet : NSObject
 
-- (NSString *)breed;
-- (void)setBreed:(NSString *)aBreed;
+@property (copy, nonatomic) NSString *breed;
+@property (copy, nonatomic) NSString *name;
 
 @end
+
+//@interface Pet : NSObject {
+//    NSString *_breed;
+//    NSString *_name;
+//}
+//
+//- (NSString *)breed;
+//- (void)setBreed:(NSString *)aBreed;
+//
+//- (NSString *)name;
+//- (void)setName:(NSString *)newValue;
+//
+//@end
