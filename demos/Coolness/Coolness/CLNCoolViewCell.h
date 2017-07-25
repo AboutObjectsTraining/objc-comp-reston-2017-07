@@ -2,4 +2,6 @@
 
 @interface CLNCoolViewCell : UIView
 
+@property (nonatomic, copy) NSString *text;
+
 @end

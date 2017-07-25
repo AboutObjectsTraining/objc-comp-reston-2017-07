@@ -4,21 +4,23 @@
 @implementation CLNCoolViewController
 
 - (void)loadView {
-    CGRect frameRect = [[UIScreen mainScreen] bounds];
-    [self setView:[[UIView alloc] initWithFrame:frameRect]];
-    
+    self.view = [[UIView alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.view.backgroundColor = UIColor.brownColor;
     
-    [self.view setBackgroundColor:[UIColor brownColor]];
+    CLNCoolViewCell *subview1 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(20.0, 60.0, 80.0, 30.0)];
+    CLNCoolViewCell *subview2 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(40.0, 100.0, 80.0, 30.0)];
     
-    UIView *subview1 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(20.0, 60.0, 80.0, 30.0)];
-    UIView *subview2 = [[CLNCoolViewCell alloc] initWithFrame:CGRectMake(40.0, 100.0, 80.0, 30.0)];
+    subview1.text = @"Hello World!";
+    subview2.text = @"Cool View Cells Rock!!!";
     
-    [[self view] addSubview:subview1];
-    [[self view] addSubview:subview2];
+    [subview1 sizeToFit];
+    [subview2 sizeToFit];
     
-    [subview1 setBackgroundColor:[UIColor purpleColor]];
-    [subview2 setBackgroundColor:[UIColor orangeColor]];
+    [self.view addSubview:subview1];
+    [self.view addSubview:subview2];
+    
+    subview1.backgroundColor = UIColor.purpleColor;
+    subview2.backgroundColor = UIColor.orangeColor;
 }
 
 @end
