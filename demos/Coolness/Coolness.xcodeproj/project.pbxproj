@@ -13,6 +13,7 @@
 		ABD9FEB21F26911C0059B588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD9FEB01F26911C0059B588 /* LaunchScreen.storyboard */; };
 		ABD9FEBC1F26A0B00059B588 /* CLNCoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD9FEBB1F26A0B00059B588 /* CLNCoolViewController.m */; };
 		ABD9FEBF1F26A7480059B588 /* CLNCoolViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD9FEBE1F26A7480059B588 /* CLNCoolViewCell.m */; };
+		ABD9FEC11F28DD8F0059B588 /* CoolStuff.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABD9FEC01F28DD8F0059B588 /* CoolStuff.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		ABD9FEBB1F26A0B00059B588 /* CLNCoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLNCoolViewController.m; sourceTree = "<group>"; };
 		ABD9FEBD1F26A7480059B588 /* CLNCoolViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNCoolViewCell.h; sourceTree = "<group>"; };
 		ABD9FEBE1F26A7480059B588 /* CLNCoolViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLNCoolViewCell.m; sourceTree = "<group>"; };
+		ABD9FEC01F28DD8F0059B588 /* CoolStuff.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoolStuff.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				ABD9FEBB1F26A0B00059B588 /* CLNCoolViewController.m */,
 				ABD9FEBD1F26A7480059B588 /* CLNCoolViewCell.h */,
 				ABD9FEBE1F26A7480059B588 /* CLNCoolViewCell.m */,
+				ABD9FEC01F28DD8F0059B588 /* CoolStuff.xib */,
 				ABD9FEAE1F26911C0059B588 /* Assets.xcassets */,
 				ABD9FEB01F26911C0059B588 /* LaunchScreen.storyboard */,
 				ABD9FEB31F26911C0059B588 /* Info.plist */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABD9FEB21F26911C0059B588 /* LaunchScreen.storyboard in Resources */,
+				ABD9FEC11F28DD8F0059B588 /* CoolStuff.xib in Resources */,
 				ABD9FEAF1F26911C0059B588 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
