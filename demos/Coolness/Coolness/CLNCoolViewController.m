@@ -1,19 +1,31 @@
 #import "CLNCoolViewController.h"
 #import "CLNCoolViewCell.h"
 
-@interface CLNCoolViewController ()
+@interface CLNCoolViewController () <UITextFieldDelegate>
 @property (strong, nonatomic) UITextField *textField;
 @property (strong, nonatomic) UIView *contentView;
 @end
 
 @implementation CLNCoolViewController
 
+// MARK: - Action Methods
 - (void)addCoolViewCell {
     CLNCoolViewCell *cell = [[CLNCoolViewCell alloc] initWithFrame:CGRectZero];
     cell.text = self.textField.text;
     [cell sizeToFit];
     [self.contentView addSubview:cell];
 }
+
+
+// MARK: - UITextFieldDelegate Protocol Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+
+// MARK: - Loading Views
 
 - (void)loadView {
     CGRect screenRect = UIScreen.mainScreen.bounds;
@@ -30,6 +42,7 @@
     
     self.textField = [[UITextField alloc] initWithFrame:CGRectMake(15.0, 35.0, 260.0, 30.0)];
     self.textField.borderStyle = UITextBorderStyleRoundedRect;
+    self.textField.delegate = self;
     [accessoryView addSubview:self.textField];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
