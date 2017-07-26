@@ -2,6 +2,7 @@
 
 @interface CLNCoolViewCell : UIView
 
-@property (nonatomic, copy) NSString *text;
+@property (nonatomic, copy) IBInspectable NSString *text;
+@property (nonatomic) IBInspectable CGFloat borderWidth;
 
 @end

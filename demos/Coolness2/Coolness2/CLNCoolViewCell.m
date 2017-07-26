@@ -2,6 +2,7 @@
 
 const CGSize CLNTextInset = { 8.0, 8.0 };
 
+IB_DESIGNABLE
 @interface CLNCoolViewCell ()
 @property (class, nonatomic, readonly) NSDictionary *textAttributes;
 @property (nonatomic) BOOL highlighted;
@@ -14,18 +15,29 @@ const CGSize CLNTextInset = { 8.0, 8.0 };
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (!(self = [super initWithFrame:frame])) return nil;
-    
-    self.layer.borderWidth = 2.0;
-    self.layer.borderColor = UIColor.whiteColor.CGColor;
-    
-    self.layer.cornerRadius = 8.0;
-    self.layer.masksToBounds = YES;
-    
+    [self configureLayer];
     [self configureGestureRecognizers];
-    
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (!(self = [super initWithCoder:aDecoder])) return nil;
+    [self configureLayer];
+    [self configureGestureRecognizers];
+    return self;
+}
+
+- (void)configureLayer {
+    self.layer.borderWidth = 2.0;
+    self.layer.borderColor = UIColor.whiteColor.CGColor;
+    self.layer.cornerRadius = 8.0;
+    self.layer.masksToBounds = YES;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self sizeToFit];
+}
 
 - (void)configureGestureRecognizers {
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bounce)];
@@ -33,10 +45,23 @@ const CGSize CLNTextInset = { 8.0, 8.0 };
     [self addGestureRecognizer:recognizer];
 }
 
+- (CGFloat)borderWidth { return self.layer.borderWidth; }
+- (void)setBorderWidth:(CGFloat)borderWidth { self.layer.borderWidth = borderWidth; }
+
 - (void)setHighlighted:(BOOL)highlighted {
     _highlighted = highlighted;
     self.alpha = highlighted ? 0.5 : 1.0;
 }
+
+// MARK: - IB Support
+
+- (void)prepareForInterfaceBuilder {
+    self.layer.borderColor = UIColor.whiteColor.CGColor;
+    self.layer.cornerRadius = 8.0;
+    self.layer.masksToBounds = YES;
+    [self sizeToFit];
+}
+
 
 // MARK: - Animation
 
