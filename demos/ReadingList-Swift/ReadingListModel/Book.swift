@@ -17,7 +17,7 @@ open class Book: ModelObject
     open var author: Author?
     
     open override var description: String {
-        return "\(title), \(year), \(author?.description ?? unknown)"
+        return "\(String(describing: title)), \(String(describing: year)), \(author?.description ?? unknown)"
     }
     
     override class func keys() -> [String]
